@@ -1,0 +1,64 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {%load static%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='{% static "css/stilos.css"%}' type="text/css">
+    <title>Document</title>
+</head>
+{% if request.session.nomusuario %}
+
+<span class="navbar-text">Hola {{request.session.nomusuario}}</span>
+
+    {{request.sesion.nomusuario}} &nbsp;&nbsp;<a href="{% url 'loginusu'%}">cerrar sesion</a>
+<body>
+  
+    <h1>Cliente</h1>
+    
+  
+
+      <section class="sectiontres">
+        <div class="tit">Clientes</div>
+        <table  class="table table-stripes ">
+        <thead class="thead-dark">
+           <tr>
+              <th>Documento</th>
+              <th>Nombres</th>
+              <th>Apellidos</th>
+              <th>Correo</th>
+              <th>Celular</th>
+        
+          </tr>
+
+
+        </thead>
+
+
+        <tbody>
+
+            {%for i in listadoclientes %}
+            
+             
+             <tr>
+               <td>{{i.documento}}</td> 
+               <td>{{i.nombre}}</td>
+               <td>{{i.apellido}}</td>
+               <td>{{i.correo}}</td>
+               <td>{{i.celular}}</td>
+               <td><a href="/actualizarcliente/{{i.documento}}">Actualizar</a></td>
+               <td><a href="/eliminarcliente/{{i.documento}}">Actualizar</a></td>
+             
+             </tr>
+              {%endfor%}
+        </tbody>
+        </table>
+    </section>
+
+
+
+</body>
+{%endif%}
+</html>

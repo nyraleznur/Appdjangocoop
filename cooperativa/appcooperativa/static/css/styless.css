@@ -1,0 +1,117 @@
+@font-face{
+    src: url("../fuentes/ShadowsIntoLight-Regular.ttf");
+    font-family: miletra;
+}
+@font-face{
+    src: url("../fuentes/Combo-Regular.ttf");
+    font-family: mia;
+}
+
+body{
+background-image: url('../imagenes/plant-g134a9d4a9_1920.jpg');
+background-size: cover;
+}
+
+.contenedorheader{
+    background-color: rgb(2, 157, 12) ;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.titulologo{
+    background-color:0;
+    width:40% ;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav{
+    background-color: 0;
+    width: 60%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    
+}
+ul{
+    background-color: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+li{
+   display: inline;  
+   background-color: rgba(255,255,255,0.4); 
+   padding:10px;
+   width:160px;
+   margin-right: 5px;
+   text-align: center;
+   border-radius: 5px;
+}
+
+a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+  
+}
+
+.titulo{
+    background-color:0;
+    color:#fff;
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 10px;
+    text-shadow: 1px 4px 2px black;
+   
+}
+
+.logo{
+    background-image: url('../imagenes/money_bag_savings_cash_icon_188756.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    margin-right: 40px;
+
+}
+
+.art1{
+    background-color: rgba(0,0,255,0.4);
+    margin: 20px;
+    width:20%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    font-family: miletra;
+    border-radius: 20px 10px 5px 0;
+    box-shadow: 4px 6px 2px rgb(0, 0, 11);
+
+}
+
+.sectionuno{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+h2{
+    font-size: 25;
+    font-weight: bold;
+    font-family: mia;
+    margin-bottom: 20px;
+}
+p{
+  font-size:20px ;  
+}
+
+#article4{
+    background: rgb(2,0,36);
+    background: linear-gradient(315deg, rgba(2,0,36,0.4) 0%, rgba(78,175,74,0.4) 35%, rgba(130,135,11,0.4) 45%, rgba(166,108,7,0.4) 67%, rgba(158,100,86,0.4) 83%, rgba(0,212,255,0.4) 100%);
+}

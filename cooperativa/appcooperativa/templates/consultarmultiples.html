@@ -1,0 +1,86 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {%load static%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='{% static "css/stilos.css"%}' type="text/css">
+    <title>Document</title>
+</head>
+{% if request.session.nomusuario %}
+
+<span class="navbar-text">Hola {{request.session.nomusuario}}</span>
+
+    {{request.sesion.nomusuario}} &nbsp;&nbsp;<a href="{% url 'loginusu'%}">cerrar sesion</a>
+<body>
+  
+    <h1>Cliente</h1>
+    
+    <form action="/consultaru/" method="POST" class="frm">
+        {%csrf_token %}
+         <legend>Título del formulario</legend>
+         <label for="d">Documento
+          <input type="text" id="d" name="documento">
+         </label>
+         <input type="submit" id="d" name="btn">
+
+
+    </form>
+
+   
+
+      <section class="sectiontres">
+        <div class="tit">Clientes</div>
+        <table  class="table table-stripes ">
+        <thead class="thead-dark">
+           <tr>
+              <th>Documento</th>
+              <th>Nombres</th>
+              <th>Apellidos</th>
+              <th>Correo</th>
+              <th>Celular</th>
+              <th>Codigo</th>
+              <th>Monto Prestaco</th>
+              <th>Fecha</th>
+              <th>Codigo</th>
+              <th>Nombre</th>
+              <th>Plazo maximo</th>
+        
+          </tr>
+
+
+        </thead>
+
+
+        <tbody>
+
+            {%for i in listado %}
+            
+             
+             <tr>
+               <td>{{i.documento.documento}}</td> 
+               <td>{{i.documento.nombre}}</td>
+               <td>{{i.documento.apellido}}</td>
+               <td>{{i.documento.correo}}</td>
+               <td>{{i.documento.celular}}</td>
+               <td>{{i.codigo_credito}}</td> 
+               <td>{{i.montoprestado}}</td>
+               <td>{{i.fecha}}</td>
+               <td>{{i.codigo.codigo}}</td> 
+               <td>{{i.codigo.nombre}}</td>
+               <td>{{i.codigo.plazomax}}</td>
+               
+             
+             </tr>
+              {%endfor%}
+        </tbody>
+        </table>
+    </section>
+
+
+
+</body>
+{%endif%}
+</html>
